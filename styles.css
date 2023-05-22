@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+}
+
+body {
+  background-image: linear-gradient(rgba(248, 79, 87, 0.9), rgb(248, 79, 87), rgba(248, 79, 87, 0.9));
+}
+body .wrapper {
+  background-image: url(./images/bg-intro-desktop.png);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+body .wrapper .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+body .wrapper .container .flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3em;
+  max-width: 1500px;
+  width: 100%;
+  padding: 1em;
+}
+body .wrapper .container .flex .info-container {
+  width: 35%;
+}
+body .wrapper .container .flex .info-container h1 {
+  font-size: 2.6rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+body .wrapper .container .flex .info-container p {
+  font-size: 0.9rem;
+  font-weight: 500;
+  opacity: 0.8;
+}
+body .wrapper .container .flex .form-container .header {
+  background-color: hsl(248deg, 32%, 49%);
+  padding: 0.9em 1.5em;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-size: clamp(1.1rem, 1rem + 0vw, 1rem);
+}
+body .wrapper .container .flex .form-container .header .opac {
+  opacity: 0.8;
+}
+body .wrapper .container .flex .form-container form {
+  background-color: #fff;
+  padding: 2em;
+  border-radius: 8px;
+}
+body .wrapper .container .flex .form-container form input {
+  display: block;
+  width: 100%;
+  padding: 1em;
+  border-radius: 6px;
+  outline: none;
+  border: 1px solid hsl(246deg, 25%, 77%);
+  color: hsl(249deg, 10%, 26%);
+  font-weight: 600;
+}
+body .wrapper .container .flex .form-container form input[type=submit] {
+  background-color: hsl(154deg, 59%, 51%);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.2em;
+  border-bottom: 3px solid hsl(154deg, 100%, 31%);
+  opacity: 1;
+  transition: 0.3s;
+}
+body .wrapper .container .flex .form-container form input[type=submit]:hover {
+  opacity: 0.9;
+}
+body .wrapper .container .flex .form-container form p {
+  text-align: center;
+  font-size: 0.555rem;
+  margin: 0 auto;
+}
+body .wrapper .container .flex .form-container form .by {
+  opacity: 0.8;
+  color: #000;
+}
+body .wrapper .container .flex .form-container form .terms {
+  color: hsl(0deg, 100%, 74%);
+  font-weight: bold;
+  opacity: 1;
+}
+body .wrapper .container .flex .form-container .invalid .error-message {
+  color: hsl(0deg, 100%, 74%);
+  text-align: right;
+  font-style: italic;
+  font-size: 0.6rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  margin-top: 5px;
+}
+body .wrapper .container .flex .form-container .invalid .div-invalid {
+  position: relative;
+}
+body .wrapper .container .flex .form-container .invalid .div-invalid::after {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background: url(./images/icon-error.svg);
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  display: block;
+}
+body .wrapper .container .flex .form-container .invalid #firstName,
+body .wrapper .container .flex .form-container .invalid #lastName,
+body .wrapper .container .flex .form-container .invalid #email,
+body .wrapper .container .flex .form-container .invalid #password {
+  border: 2px solid hsl(0deg, 100%, 74%);
+}
+body .wrapper .container .flex .form-container .invalid #email::-moz-placeholder {
+  color: hsl(0deg, 100%, 74%);
+}
+body .wrapper .container .flex .form-container .invalid #email:-ms-input-placeholder {
+  color: hsl(0deg, 100%, 74%);
+}
+body .wrapper .container .flex .form-container .invalid #email::placeholder {
+  color: hsl(0deg, 100%, 74%);
+}
+
+@media (min-width: 200px) and (max-width: 428px) {
+  .flex {
+    flex-direction: column;
+  }
+  .wrapper {
+    height: 100% !important;
+  }
+  .container {
+    height: 100% !important;
+  }
+  body {
+    margin: 1.5em;
+  }
+  .info-container {
+    width: 100% !important;
+    text-align: center;
+  }
+  h1 {
+    font-size: 2rem !important;
+  }
+  form p {
+    font-size: 0.8rem !important;
+  }
+}/*# sourceMappingURL=styles.css.map */

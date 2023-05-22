@@ -1,0 +1,203 @@
+//Colors
+$Red: hsl(0, 100%, 74%);
+$Green: hsl(154, 59%, 51%);
+$Blue: hsl(248, 32%, 49%);
+$Dark-Blue: hsl(249, 10%, 26%);
+$Grayish-Blue: hsl(246, 25%, 77%);
+
+//Fonts
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+$w400: 400;
+$w500: 500;
+$w600: 600;
+$w700: 700;
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+}
+
+body {
+  background-image: linear-gradient(
+    rgba(248, 79, 87, 0.9),
+    rgba(248, 79, 87, 1),
+    rgba(248, 79, 87, 0.9)
+  );
+
+  .wrapper {
+    background-image: url(./images/bg-intro-desktop.png);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+
+      .flex {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3em;
+        max-width: 1500px;
+        width: 100%;
+        padding: 1em;
+
+        .info-container {
+          width: 35%;
+          h1 {
+            font-size: 2.6rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            font-weight: $w700;
+          }
+          p {
+            font-size: 0.9rem;
+            font-weight: $w500;
+            opacity: 0.8;
+          }
+        }
+
+        .form-container {
+          .header {
+            background-color: $Blue;
+            padding: 0.9em 1.5em;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            font-size: clamp(1.1rem, 1rem + 0vw, 1rem);
+            .opac {
+              opacity: 0.8;
+            }
+          }
+
+          form {
+            background-color: #fff;
+            padding: 2em;
+            border-radius: 8px;
+
+            input {
+              display: block;
+              width: 100%;
+              padding: 1em;
+              border-radius: 6px;
+              outline: none;
+              border: 1px solid $Grayish-Blue;
+              color: $Dark-Blue;
+              font-weight: $w600;
+            }
+
+            input[type="submit"] {
+              background-color: $Green;
+              color: #fff;
+              font-weight: $w600;
+              cursor: pointer;
+              letter-spacing: 0.2em;
+              border-bottom: 3px solid hsl(154, 100%, 31%);
+              opacity: 1;
+              transition: 0.3s;
+            }
+
+            input[type="submit"]:hover {
+              opacity: 0.9;
+            }
+
+            p {
+              text-align: center;
+              font-size: 0.555rem;
+              margin: 0 auto;
+            }
+
+            .by {
+              opacity: 0.8;
+              color: #000;
+            }
+
+            .terms {
+              color: $Red;
+              font-weight: bold;
+              opacity: 1;
+            }
+          }
+
+          .invalid .error-message {
+            color: $Red;
+            text-align: right;
+            font-style: italic;
+            font-size: 0.6rem;
+            font-weight: $w600;
+            margin-bottom: 15px;
+            margin-top: 5px;
+          }
+
+          .invalid .div-invalid {
+            position: relative;
+          }
+
+          .invalid .div-invalid::after {
+            content: "";
+            width: 24px;
+            height: 24px;
+            background: url(./images/icon-error.svg);
+            position: absolute;
+            right: 12px;
+            top: 12px;
+            display: block;
+          }
+
+          .invalid #firstName,
+          .invalid #lastName,
+          .invalid #email,
+          .invalid #password {
+            border: 2px solid $Red;
+          }
+
+          .invalid #email::placeholder {
+            color: $Red;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 200px) and (max-width: 428px) {
+  .flex {
+    flex-direction: column;
+  }
+
+  .wrapper {
+    height: 100% !important;
+  }
+
+  .container {
+    height: 100% !important;
+  }
+
+  body {
+    margin: 1.5em;
+  }
+
+  .info-container {
+    width: 100% !important;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 2rem !important;
+  }
+
+  form {
+    p {
+      font-size: 0.8rem !important;
+    }
+  }
+}
